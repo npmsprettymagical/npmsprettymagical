@@ -3,9 +3,17 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
+let colors = {
+  title: "#468def",
+}
+
+function ShinyLink(props) {
+  return <span {...props} style={{ color: colors.title }} />
+}
+
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -13,7 +21,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.2),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -26,7 +34,8 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <ShinyLink>n</ShinyLink>pm's <ShinyLink>p</ShinyLink>
+            retty <ShinyLink>m</ShinyLink>agical
           </Link>
         </h1>
       )
@@ -34,6 +43,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
+            ...scale(1.2),
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
@@ -46,7 +56,8 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <ShinyLink>n</ShinyLink>pm's <ShinyLink>p</ShinyLink>retty{" "}
+            <ShinyLink>m</ShinyLink>agical
           </Link>
         </h3>
       )
