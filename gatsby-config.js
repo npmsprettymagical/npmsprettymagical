@@ -3,10 +3,7 @@ module.exports = {
     title: `npm's pretty magical`,
     author: `Md Faizaan & Kaushik Iyer`,
     description: `npm's pretty magical`,
-    siteUrl: `https://npmsprettymagical.com/`,
-    social: {
-      twitter: `aulisius_`,
-    },
+    siteUrl: `https://npmsprettymagical.com/`
   },
   plugins: [
     {
@@ -66,7 +63,6 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
